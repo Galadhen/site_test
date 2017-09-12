@@ -1,4 +1,4 @@
-package lettest;
+package testclass;
 
 import org.junit.After;
 import org.junit.Before;
@@ -6,27 +6,22 @@ import org.junit.Test;
 
 import java.net.MalformedURLException;
 
-import static com.codeborne.selenide.Selenide.*;
+import static com.codeborne.selenide.Selenide.$;
+import static com.codeborne.selenide.Selenide.$$;
+import static com.codeborne.selenide.Selenide.open;
 import static com.codeborne.selenide.WebDriverRunner.closeWebDriver;
 import static com.codeborne.selenide.WebDriverRunner.getWebDriver;
-import static lettest.util.timeout;
-import static lettest.util.useChromeDriver;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
+import static testclass.util.useChromeDriver;
 
-public class tttest {
+public class TestSite {
+
     @Before
-    public void launchBrowser() throws MalformedURLException{
+    public void launchBrowser() throws MalformedURLException {
         useChromeDriver();
     }
-
-    @Test
-    public void letsTestDemo() throws MalformedURLException {
-            open("https://kinowidget.kinoplan.ru/1803/");
-            assertTrue("Today all over",$(".seance-item").exists());
-            $$(".seance-item").get(0).click();
-            assertFalse("Houston, you have a problem", $(".payment-responce__title").exists());
-        }
+    
     @Test
     public void letsTestBataysk() throws MalformedURLException {
         open("https://kinowidget.kinoplan.ru/392/");

@@ -1,4 +1,4 @@
-package lettest;
+package testclass;
 
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.WebDriverRunner;
