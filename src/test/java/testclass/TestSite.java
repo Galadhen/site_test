@@ -21,7 +21,7 @@ public class TestSite {
     public void launchBrowser() throws MalformedURLException {
         useChromeDriver();
     }
-    
+
     @Test
     public void letsTestBataysk() throws MalformedURLException {
         open("https://kinowidget.kinoplan.ru/392/");
