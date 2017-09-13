@@ -26,14 +26,15 @@ public class TestSite {
     @Test
     public void letsTestBataysk() throws MalformedURLException {
         open("https://kinowidget.kinoplan.ru/392/");
+        timeout(800);
         assertTrue("Today all over",$(".seance-item").exists());
         $$(".seance-item").get(0).click();
-        timeout(1000);
         assertFalse("Houston, you have a problem", $(".payment-responce__title").exists());
     }
     @Test
     public void letsTestMayak() throws MalformedURLException {
         open("https://kinowidget.kinoplan.ru/1280/");
+        timeout(800);
         assertTrue("Today all over",$(".seance-item").exists());
         $$(".seance-item").get(0).click();
         assertFalse("Houston, you have a problem", $(".payment-responce__title").exists());
@@ -41,6 +42,7 @@ public class TestSite {
     @Test
     public void letsTestSaratov() throws MalformedURLException {
         open("https://kinowidget.kinoplan.ru/2086/");
+        timeout(800);
         assertTrue("Today all over",$(".seance-item").exists());
         $$(".seance-item").get(0).click();
         assertFalse("Houston, you have a problem", $(".payment-responce__title").exists());
@@ -48,6 +50,7 @@ public class TestSite {
     @Test
     public void letsTestKinopolis() throws MalformedURLException {
         open("https://kinowidget.kinoplan.ru/3963/");
+        timeout(800);
         assertTrue("Today all over",$(".seance-item").exists());
         $$(".seance-item").get(0).click();
         assertFalse("Houston, you have a problem", $(".payment-responce__title").exists());
@@ -55,6 +58,7 @@ public class TestSite {
     @Test
     public void letsTestLomonosov() throws MalformedURLException {
         open("https://kinowidget.kinoplan.ru/4108/");
+        timeout(800);
         assertTrue("Today all over",$(".seance-item").exists());
         $$(".seance-item").get(0).click();
         assertFalse("Houston, you have a problem", $(".payment-responce__title").exists());
@@ -62,6 +66,7 @@ public class TestSite {
     @Test
     public void letsTestKirov() throws MalformedURLException {
         open("https://kinowidget.kinoplan.ru/2696/");
+        timeout(800);
         assertTrue("Today all over",$(".seance-item").exists());
         $$(".seance-item").get(0).click();
         assertFalse("Houston, you have a problem", $(".payment-responce__title").exists());
@@ -77,6 +82,7 @@ public class TestSite {
     @Test
     public void letsTestMihaylovsk() throws MalformedURLException {
         open("https://kinowidget.kinoplan.ru/4140/");
+        timeout(800);
         assertTrue("Today all over",$(".seance-item").exists());
         $$(".seance-item").get(0).click();
         assertFalse("Houston, you have a problem", $(".payment-responce__title").exists());
@@ -84,6 +90,7 @@ public class TestSite {
     @Test
     public void letsTestJalilN() throws MalformedURLException {
         open("https://kinowidget.kinoplan.ru/237/");
+        timeout(800);
         assertTrue("Today all over",$(".seance-item").exists());
         $$(".seance-item").get(0).click();
         assertFalse("Houston, you have a problem", $(".payment-responce__title").exists());
