@@ -13,6 +13,7 @@ import static com.codeborne.selenide.WebDriverRunner.closeWebDriver;
 import static com.codeborne.selenide.WebDriverRunner.getWebDriver;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
+import static testclass.util.timeout;
 import static testclass.util.useChromeDriver;
 
 public class TestSite {
@@ -27,6 +28,7 @@ public class TestSite {
         open("https://kinowidget.kinoplan.ru/392/");
         assertTrue("Today all over",$(".seance-item").exists());
         $$(".seance-item").get(0).click();
+        timeout(1000);
         assertFalse("Houston, you have a problem", $(".payment-responce__title").exists());
     }
     @Test
@@ -67,6 +69,7 @@ public class TestSite {
     @Test
     public void letsTestSovremennik() throws MalformedURLException {
         open("https://kinowidget.kinoplan.ru/160/");
+        timeout(800);
         assertTrue("Today all over",$(".seance-item").exists());
         $$(".seance-item").get(0).click();
         assertFalse("Houston, you have a problem", $(".payment-responce__title").exists());
