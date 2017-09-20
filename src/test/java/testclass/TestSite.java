@@ -84,6 +84,14 @@ public class TestSite {
         checkHall();
     }
 
+    @Test
+    public void letsTestCDK() throws MalformedURLException {
+        open("https://kinowidget.kinoplan.ru/237/");
+        timeout(800);
+        assertTrue("Today all over",$(".seance-item").exists());
+        checkHall();
+    }
+
     @After
     public void tearDown() throws Exception {
         closeWebDriver();
