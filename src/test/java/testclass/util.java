@@ -39,6 +39,9 @@ public class util {
             timeout(5000);
             if ($(".spinner").exists()){
                 fail("Houston you have a problem");}
+                else {
+                assertTrue("Houston, you have a problem", !$(".payment-responce__title").exists());
+            }
         }
         else {
             assertTrue("Houston, you have a problem", !$(".payment-responce__title").exists());
