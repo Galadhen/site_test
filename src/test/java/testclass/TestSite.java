@@ -86,7 +86,7 @@ public class TestSite {
 
     @Test
     public void letsTestCDK() throws MalformedURLException {
-        open("https://kinowidget.kinoplan.ru/237/");
+        open("https://kinowidget.kinoplan.ru/1643/");
         timeout(800);
         assertTrue("Today all over",$(".seance-item").exists());
         checkHall();
