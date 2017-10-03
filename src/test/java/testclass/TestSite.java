@@ -92,6 +92,22 @@ public class TestSite {
         checkHall();
     }
 
+    @Test
+    public void letsTest8ka() throws MalformedURLException {
+        open("https://kinowidget.kinoplan.ru/2791/");
+        timeout(800);
+        assertTrue("Today all over",$(".seance-item").exists());
+        checkHall();
+    }
+
+    @Test
+    public void letsTestKinojam() throws MalformedURLException {
+        open("https://kinowidget.kinoplan.ru/211/");
+        timeout(800);
+        assertTrue("Today all over",$(".seance-item").exists());
+        checkHall();
+    }
+
     @After
     public void tearDown() throws Exception {
         closeWebDriver();
