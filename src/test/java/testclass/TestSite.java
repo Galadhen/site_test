@@ -124,6 +124,14 @@ public class TestSite {
         checkHall();
     }
 
+    @Test
+    public void letsTestVatutin() throws MalformedURLException {
+        open("https://kinowidget.kinoplan.ru/2798/");
+        timeout(800);
+        assertTrue("Today all over",$(".seance-item").exists());
+        checkHall();
+    }
+
     @After
     public void tearDown() throws Exception {
         closeWebDriver();
