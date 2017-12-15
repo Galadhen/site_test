@@ -25,62 +25,62 @@ public class TestSite {
     public void letsTestBataysk() throws MalformedURLException {
         open("http://xn----mtbcbbldaudgf3r.xn--p1ai/");
         timeout(800);
-        assertTrue("Today all over",$(".seance-item.time-tooltip").exists());
+        assertTrue("Today all over",$(".seance-item").exists());
         checkHall();
     }
     @Test
     public void letsTestMayak() throws MalformedURLException {
         open("http://kino-mayak.ru/");
         timeout(800);
-        assertTrue("Today all over",$(".seance-item.time-tooltip").exists());
+        assertTrue("Today all over",$(".seance-item").exists());
        checkHall();
     }
     @Test
     public void letsTestSaratov() throws MalformedURLException {
         open("http://domkinosar.ru/");
         timeout(800);
-        assertTrue("Today all over", $(".seance-item.time-tooltip").exists());
+        assertTrue("Today all over", $(".seance-item").exists());
         checkHall();
     }
     @Test
     public void letsTestKinopolis() throws MalformedURLException {
         open("http://orbita.kinopolis-film.ru/");
         timeout(800);
-        assertTrue("Today all over",$(".seance-item.time-tooltip").exists());
+        assertTrue("Today all over",$(".seance-item").exists());
         checkHall();}
     @Test
     public void letsTestLomonosov() throws MalformedURLException {
         open("http://kinolomonosov.ru/");
         timeout(800);
-        assertTrue("Today all over",$(".seance-item.time-tooltip").exists());
+        assertTrue("Today all over",$(".seance-item").exists());
         checkHall();
     }
     @Test
     public void letsTestKirov() throws MalformedURLException {
         open("http://kinokirov40.ru/");
         timeout(800);
-        assertTrue("Today all over",$(".seance-item.time-tooltip").exists());
+        assertTrue("Today all over",$(".seance-item").exists());
         checkHall();
     }
     @Test
     public void letsTestSovremennik() throws MalformedURLException {
         open("http://kino-sovremennik.ru/");
         timeout(800);
-        assertTrue("Today all over",$(".seance-item.time-tooltip").exists());
+        assertTrue("Today all over",$(".seance-item").exists());
         checkHall();
     }
     @Test
     public void letsTestMihaylovsk() throws MalformedURLException {
         open("http://kinorossia.ru/");
         timeout(800);
-        assertTrue("Today all over",$(".seance-item.time-tooltip").exists());
+        assertTrue("Today all over",$(".seance-item").exists());
         checkHall();
     }
     @Test
     public void letsTestJalilN() throws MalformedURLException {
         open("http://jalil-nk.ru/");
         timeout(800);
-        assertTrue("Today all over",$(".seance-item.time-tooltip").exists());
+        assertTrue("Today all over",$(".seance-item").exists());
         checkHall();
     }
 
@@ -88,7 +88,7 @@ public class TestSite {
     public void letsTestCDK() throws MalformedURLException {
         open("https://kinowidget.kinoplan.ru/1643/");
         timeout(800);
-        assertTrue("Today all over",$(".seance-item.time-tooltip").exists());
+        assertTrue("Today all over",$(".seance-item").exists());
         checkHall();
     }
 
@@ -96,7 +96,7 @@ public class TestSite {
     public void letsTest8ka() throws MalformedURLException {
         open("http://xn--8-8sb3a.xn--p1ai/");
         timeout(800);
-        assertTrue("Today all over",$(".seance-item.time-tooltip").exists());
+        assertTrue("Today all over",$(".seance-item").exists());
         checkHall();
     }
 
@@ -104,7 +104,7 @@ public class TestSite {
     public void letsTestKinojam() throws MalformedURLException {
         open("https://kinojam.club/");
         timeout(800);
-        assertTrue("Today all over",$(".seance-item.time-tooltip").exists());
+        assertTrue("Today all over",$(".seance-item").exists());
         checkHall();
     }
 
@@ -112,7 +112,7 @@ public class TestSite {
     public void letsTestDrugba() throws MalformedURLException {
         open("http://xn--80abiiilwit4a.xn--p1ai/");
         timeout(800);
-        assertTrue("Today all over",$(".seance-item.time-tooltip").exists());
+        assertTrue("Today all over",$(".seance-item").exists());
         checkHall();
     }
 
@@ -120,7 +120,7 @@ public class TestSite {
     public void letsTestKinomirSokol() throws MalformedURLException {
         open("http://kinomirsokol35.ru/");
         timeout(800);
-        assertTrue("Today all over",$(".seance-item.time-tooltip").exists());
+        assertTrue("Today all over",$(".seance-item").exists());
         checkHall();
     }
 
@@ -128,7 +128,23 @@ public class TestSite {
     public void letsTestVatutin() throws MalformedURLException {
         open("http://xn----7sbfzbdhce0al6c.xn--p1ai/");
         timeout(800);
-        assertTrue("Today all over",$(".seance-item.time-tooltip").exists());
+        assertTrue("Today all over",$(".seance-item").exists());
+        checkHall();
+    }
+
+    @Test
+    public void letsTestEpicentr() throws MalformedURLException {
+        open("http://epicentr.ru/");
+        timeout(800);
+        assertTrue("Today all over",$(".seance-item").exists());
+        checkHall();
+    }
+
+    @Test
+    public void letsTestSmena() throws MalformedURLException {
+        open("http://smena-luga.ru/");
+        timeout(800);
+        assertTrue("Today all over",$(".seance-item").exists());
         checkHall();
     }
 
