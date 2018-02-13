@@ -16,6 +16,7 @@ import static org.junit.Assert.fail;
 
 public class util {
 
+    /*
     public static void useChromeDriver() throws MalformedURLException{
         ChromeDriverManager.getInstance().setup();
         ChromeOptions options = new ChromeOptions();
@@ -23,6 +24,12 @@ public class util {
         WebDriver browser = new ChromeDriver(options);
         Configuration.startMaximized = false;
         WebDriverRunner.setWebDriver(browser);
+    }
+    */
+
+    public static void start() throws MalformedURLException {
+        Configuration.browser = "chrome";
+        Configuration.headless = true;
     }
 
     public static void timeout(int millis) {
