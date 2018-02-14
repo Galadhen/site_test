@@ -11,6 +11,7 @@ import java.net.MalformedURLException;
 
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.$$;
+import static com.codeborne.selenide.Selenide.switchTo;
 import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.fail;
 
@@ -40,8 +41,11 @@ public class util {
         }
     }
     public static void checkHall() {
+        $$(".releases-item__poster-img").get(0).click();
         $$(".seance-item").get(0).click();
-        timeout(500);
+        timeout(800);
+        switchTo().frame("kw-iframe");
+        timeout(800);
         if ($(By.className("spinner")).exists()){
             timeout(5000);
             if ($(".spinner").exists()){

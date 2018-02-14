@@ -3,13 +3,14 @@ package testclass;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
+import org.openqa.selenium.By;
 
 import java.net.MalformedURLException;
 
-import static com.codeborne.selenide.Selenide.$;
-import static com.codeborne.selenide.Selenide.open;
+import static com.codeborne.selenide.Selenide.*;
 import static com.codeborne.selenide.WebDriverRunner.closeWebDriver;
 import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.fail;
 import static testclass.util.*;
 
 public class TestSite {
@@ -21,62 +22,62 @@ public class TestSite {
 
     @Test
     public void letsTestBataysk() throws MalformedURLException {
-        open("https://kinowidget.kinoplan.ru/392/");
+        open("http://xn----mtbcbbldaudgf3r.xn--p1ai/");
         timeout(800);
         assertTrue("Today all over",$(".seance-item").exists());
         checkHall();
     }
     @Test
     public void letsTestMayak() throws MalformedURLException {
-        open("https://kinowidget.kinoplan.ru/1280/");
+        open("http://kino-mayak.ru/");
         timeout(800);
         assertTrue("Today all over",$(".seance-item").exists());
        checkHall();
     }
     @Test
     public void letsTestSaratov() throws MalformedURLException {
-        open("https://kinowidget.kinoplan.ru/2086/");
+        open("http://domkinosar.ru/");
         timeout(800);
         assertTrue("Today all over", $(".seance-item").exists());
         checkHall();
     }
     @Test
     public void letsTestKinopolis() throws MalformedURLException {
-        open("https://kinowidget.kinoplan.ru/3963/");
+        open("http://orbita.kinopolis-film.ru/");
         timeout(800);
         assertTrue("Today all over",$(".seance-item").exists());
         checkHall();}
     @Test
     public void letsTestLomonosov() throws MalformedURLException {
-        open("https://kinowidget.kinoplan.ru/4108/");
+        open("http://kinolomonosov.ru/");
         timeout(800);
         assertTrue("Today all over",$(".seance-item").exists());
         checkHall();
     }
     @Test
     public void letsTestKirov() throws MalformedURLException {
-        open("https://kinowidget.kinoplan.ru/2696/");
+        open("http://kinokirov40.ru/");
         timeout(800);
         assertTrue("Today all over",$(".seance-item").exists());
         checkHall();
     }
     @Test
     public void letsTestSovremennik() throws MalformedURLException {
-        open("https://kinowidget.kinoplan.ru/160/");
+        open("http://kino-sovremennik.ru/");
         timeout(800);
         assertTrue("Today all over",$(".seance-item").exists());
         checkHall();
     }
     @Test
     public void letsTestMihaylovsk() throws MalformedURLException {
-        open("https://kinowidget.kinoplan.ru/4140/");
+        open("http://kinorossia.ru/");
         timeout(800);
         assertTrue("Today all over",$(".seance-item").exists());
         checkHall();
     }
     @Test
     public void letsTestJalilN() throws MalformedURLException {
-        open("https://kinowidget.kinoplan.ru/237/");
+        open("http://jalil-nk.ru/");
         timeout(800);
         assertTrue("Today all over",$(".seance-item").exists());
         checkHall();
@@ -87,12 +88,24 @@ public class TestSite {
         open("https://kinowidget.kinoplan.ru/1643/");
         timeout(800);
         assertTrue("Today all over",$(".seance-item").exists());
-        checkHall();
+        $$(".seance-item").get(0).click();
+        timeout(800);
+        if ($(By.className("spinner")).exists()){
+            timeout(5000);
+            if ($(".spinner").exists()){
+                fail("Houston you have a problem");}
+            else {
+                assertTrue("Houston, you have a problem", !$(".payment-responce__title").exists());
+            }
+        }
+        else {
+            assertTrue("Houston, you have a problem", !$(".payment-responce__title").exists());
+        }
     }
 
     @Test
     public void letsTest8ka() throws MalformedURLException {
-        open("https://kinowidget.kinoplan.ru/2791/");
+        open("http://xn--8-8sb3a.xn--p1ai/");
         timeout(800);
         assertTrue("Today all over",$(".seance-item").exists());
         checkHall();
@@ -100,7 +113,7 @@ public class TestSite {
 
     @Test
     public void letsTestKinojam() throws MalformedURLException {
-        open("https://kinowidget.kinoplan.ru/211/");
+        open("https://kinojam.club/");
         timeout(800);
         assertTrue("Today all over",$(".seance-item").exists());
         checkHall();
@@ -108,7 +121,7 @@ public class TestSite {
 
     @Test
     public void letsTestDrugba() throws MalformedURLException {
-        open("https://kinowidget.kinoplan.ru/6381/");
+        open("http://xn--80abiiilwit4a.xn--p1ai/");
         timeout(800);
         assertTrue("Today all over",$(".seance-item").exists());
         checkHall();
@@ -116,7 +129,7 @@ public class TestSite {
 
     @Test
     public void letsTestVatutin() throws MalformedURLException {
-        open("https://kinowidget.kinoplan.ru/2798/");
+        open("http://xn----7sbfzbdhce0al6c.xn--p1ai/");
         timeout(800);
         assertTrue("Today all over",$(".seance-item").exists());
         checkHall();
@@ -124,7 +137,7 @@ public class TestSite {
 
     @Test
     public void letsTestEpicentr() throws MalformedURLException {
-        open("https://kinowidget.kinoplan.ru/224/");
+        open("http://epicentr.ru/");
         timeout(800);
         assertTrue("Today all over",$(".seance-item").exists());
         checkHall();
@@ -132,7 +145,7 @@ public class TestSite {
 
     @Test
     public void letsTestSmena() throws MalformedURLException {
-        open("https://kinowidget.kinoplan.ru/1630/");
+        open("http://smena-luga.ru/");
         timeout(800);
         assertTrue("Today all over",$(".seance-item").exists());
         checkHall();
@@ -140,7 +153,7 @@ public class TestSite {
 
     @Test
     public void letsTestSputnik() throws MalformedURLException {
-        open("https://kinowidget.kinoplan.ru/88/");
+        open("http://afishakinosputnik.ru/");
         timeout(800);
         assertTrue("Today all over",$(".seance-item").exists());
         checkHall();
@@ -148,7 +161,7 @@ public class TestSite {
 
     @Test
     public void letsTestKinopolisvsev() throws MalformedURLException {
-        open("https://kinowidget.kinoplan.ru/1126/");
+        open("http://vsev.kinopolis-film.ru/");
         timeout(800);
         assertTrue("Today all over",$(".seance-item").exists());
         checkHall();
@@ -156,7 +169,7 @@ public class TestSite {
 
     @Test
     public void letsTestPervomaisk() throws MalformedURLException {
-        open("https://kinowidget.kinoplan.ru/6555/");
+        open("http://1maykino.ru/");
         timeout(800);
         assertTrue("Today all over",$(".seance-item").exists());
         checkHall();
@@ -164,7 +177,7 @@ public class TestSite {
 
     @Test
     public void letsTestOktober() throws MalformedURLException {
-        open("https://kinowidget.kinoplan.ru/2677/");
+        open("http://dk-oktober.ru/");
         timeout(800);
         assertTrue("Today all over",$(".seance-item").exists());
         checkHall();
