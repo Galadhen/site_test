@@ -182,5 +182,12 @@ public class TestSite {
         assertTrue("Today all over",$(".seance-item").exists());
         checkHall();
     }
+    @Test
+    public void letsTestGreenvich() throws MalformedURLException {
+        open("http://xn----ctbcubbnufkn2g.xn--p1ai/");
+        timeout(800);
+        assertTrue("Today all over",$(".seance-item").exists());
+        checkHall();
+    }
 
 }
