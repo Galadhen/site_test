@@ -103,6 +103,7 @@ public class TestSite {
         }
     }
 
+    /*
     @Test
     public void letsTest8ka() throws MalformedURLException {
         open("http://xn--8-8sb3a.xn--p1ai/");
@@ -110,6 +111,7 @@ public class TestSite {
         assertTrue("Today all over",$(".seance-item").exists());
         checkHall();
     }
+    */
 
     @Test
     public void letsTestKinojam() throws MalformedURLException {
