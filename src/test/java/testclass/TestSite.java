@@ -184,6 +184,7 @@ public class TestSite {
         assertTrue("Today all over",$(".seance-item").exists());
         checkHall();
     }
+
     @Test
     public void letsTestGreenvich() throws MalformedURLException {
         open("http://xn----ctbcubbnufkn2g.xn--p1ai/");
@@ -192,4 +193,19 @@ public class TestSite {
         checkHall();
     }
 
+    @Test
+    public void letsTestRumba() throws MalformedURLException {
+        open("http://rumba.kinopolis-film.ru/");
+        timeout(800);
+        assertTrue("Today all over",$(".seance-item").exists());
+        checkHall();
+    }
+
+    @Test
+    public void letsTestGorizont() throws MalformedURLException {
+        open("http://gorizontcinema.ru/");
+        timeout(800);
+        assertTrue("Today all over",$(".seance-item").exists());
+        checkHall();
+    }
 }
