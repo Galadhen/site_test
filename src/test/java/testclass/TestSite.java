@@ -103,7 +103,6 @@ public class TestSite {
         }
     }
 
-    /*
     @Test
     public void letsTest8ka() throws MalformedURLException {
         open("http://xn--8-8sb3a.xn--p1ai/");
@@ -111,7 +110,6 @@ public class TestSite {
         assertTrue("Today all over",$(".seance-item").exists());
         checkHall();
     }
-    */
 
     @Test
     public void letsTestKinojam() throws MalformedURLException {
@@ -203,7 +201,15 @@ public class TestSite {
 
     @Test
     public void letsTestGorizont() throws MalformedURLException {
-        open("http://gorizontcinema.ru/");
+        open("https://gorizontcinema.ru/");
+        timeout(800);
+        assertTrue("Today all over",$(".seance-item").exists());
+        checkHall();
+    }
+
+    @Test
+    public void letsTestTerrikon() throws MalformedURLException {
+        open("http://terrikon-kino.ru/");
         timeout(800);
         assertTrue("Today all over",$(".seance-item").exists());
         checkHall();
