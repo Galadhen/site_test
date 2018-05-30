@@ -208,6 +208,14 @@ public class TestSite {
     }
 
     @Test
+    public void letsTestKubus() throws MalformedURLException {
+        open("http://kubus.kinopolis-film.ru/");
+        timeout(800);
+        assertTrue("Today all over",$(".seance-item").exists());
+        checkHall();
+    }
+
+    @Test
     public void letsTestTerrikon() throws MalformedURLException {
         open("http://terrikon-kino.ru/");
         timeout(800);
