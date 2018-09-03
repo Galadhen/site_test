@@ -168,14 +168,6 @@ public class TestSite {
     }
 
     @Test
-    public void letsTestPervomaisk() throws MalformedURLException {
-        open("http://1maykino.ru/");
-        timeout(2000);
-        assertTrue("Today all over",$(".seance-item__overlay").exists());
-        checkHall();
-    }
-
-    @Test
     public void letsTestOktober() throws MalformedURLException {
         open("http://dk-oktober.ru/");
         timeout(2000);
@@ -248,6 +240,14 @@ public class TestSite {
     }
 
     @Test
+    public void letsTestPradaBalashiha() throws MalformedURLException {
+        open("http://balashiha.prada3d.ru/");
+        timeout(2000);
+        assertTrue("Today all over",$(".seance-item__overlay").exists());
+        checkHall();
+    }
+
+    @Test
     public void letsTestPremierKinopark() throws MalformedURLException {
         open("http://xn--80apfcnghj.com/");
         timeout(2000);
@@ -266,6 +266,38 @@ public class TestSite {
     @Test
     public void letsTestKosmos() throws MalformedURLException {
         open("http://kosmoskan.ru/");
+        timeout(2000);
+        assertTrue("Today all over",$(".seance-item__overlay").exists());
+        checkHall();
+    }
+
+    @Test
+    public void letsTestKinopolisPark() throws MalformedURLException {
+        open("http://park.kinopolis-film.ru/");
+        timeout(2000);
+        assertTrue("Today all over",$(".seance-item__overlay").exists());
+        checkHall();
+    }
+
+    @Test
+    public void letsTestZelux() throws MalformedURLException {
+        open("http://zelux-club.ru/");
+        timeout(2000);
+        assertTrue("Today all over",$(".seance-item__overlay").exists());
+        checkHall();
+    }
+
+    @Test
+    public void letsTestKinograd() throws MalformedURLException {
+        open("http://cinema-grad.com/");
+        timeout(2000);
+        assertTrue("Today all over",$(".seance-item__overlay").exists());
+        checkHall();
+    }
+
+    @Test
+    public void letsTestKinogradPolyus() throws MalformedURLException {
+        open("http://polyus.cinema-grad.com/");
         timeout(2000);
         assertTrue("Today all over",$(".seance-item__overlay").exists());
         checkHall();
